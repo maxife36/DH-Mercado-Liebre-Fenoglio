@@ -1,0 +1,461 @@
+/*------------ PRE CONFIG --------------*/
+:root {
+  --amarillo-meli: #EAC926;
+  --azul-meli: #03264C;
+  --blanco-meli: #fff;
+  --celeste-meli: #1259c3;
+  --gris-claro-meli: #ebebeb;
+  --gris-oscuro-meli: #666;
+  --verde-descuento-meli: #00a650;
+  --negro-meli: #000;
+  --hamburguer-width: 28px;
+  --truck-icon: 30px;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--gris-claro-meli);
+}
+
+.flx-col-wrap {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.flx-col-nowrap {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.flx-row-wrap {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.flx-row-nowrap {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+/*-----------------HEADER---------------------*/
+
+header {
+  background-color: var(--amarillo-meli);
+  width: 100vw;
+}
+
+.logo-container {
+  height: 5vh;
+  width: inherit;
+}
+
+.logo-img {
+  height: inherit;
+  width: 50vw;
+}
+
+.search-box {
+  height: inherit;
+  position: relative;
+  width: 50vw;
+}
+
+.search-box input::placeholder {
+  font-size: 11px;
+}
+
+.search-box input {
+  border-radius: 5px;
+  border: none;
+  height: 60%;
+  width: 85%;
+}
+
+.search-box label {
+  height: 60%;
+  right: 7.5%;
+  width: 14%;
+  background-color: var(--blanco-meli);
+  border-radius: 5px;
+  position: absolute;
+  justify-content: space-around;
+}
+
+.search-box label::before {
+  content: "";
+  height: 80%;
+  width: 1.5px;
+  background-color: var(--gris-claro-meli);
+}
+
+.search-box i {
+  background-color: var(--blanco-meli);
+  font-size: 2vh;
+}
+
+.txt-cuota {
+  width: 100vw;
+}
+
+.txt-cuota h4 {
+  height: 4vh;
+  margin-left: 1vh;
+  padding-top: 1vh;
+  text-align: center;
+}
+
+/* ------HAMBURGUER STRUCTURE----- */
+
+.hamburguer-menu {
+  background-color: var(--celeste-meli);
+  border-radius: calc(var(--hamburguer-width) * 0.1);
+  height: var(--hamburguer-width);
+  justify-content: space-evenly;
+  margin-bottom: 0.7vh;
+  margin-top: 0.7vh;
+  position: relative;
+  width: var(--hamburguer-width);
+}
+
+.hamburguer-menu div {
+  background-color: var(--blanco-meli);
+  border-radius: calc(var(--hamburguer-width) * 0.1);
+  height: calc(var(--hamburguer-width) * 0.1);
+  width: calc(var(--hamburguer-width) * 0.6);
+}
+
+.hamburguer-menu::after,
+.hamburguer-menu::before {
+  background-color: var(--blanco-meli);
+  border-radius: calc(var(--hamburguer-width) * 0.1);
+  content: "";
+  height: calc(var(--hamburguer-width) * 0.1);
+  position: absolute;
+  transition: transform 0.5s ease;
+  width: calc(var(--hamburguer-width) * 0.6);
+}
+
+.hamburguer-menu::after {
+  transform: rotate(0deg) translate(0, calc(var(--hamburguer-width) * -0.25));
+}
+
+.hamburguer-menu::before {
+  transform: rotate(0deg) translate(0, calc(var(--hamburguer-width) * 0.25));
+}
+
+/* ------HAMBURGUER ANIMATION----- */
+
+#hamburguer-menu:checked+.hamburguer-menu div {
+  width: 0;
+}
+
+#hamburguer-menu:checked+.hamburguer-menu::after {
+  transform: rotate(45deg) translate(0, 0px);
+}
+
+#hamburguer-menu:checked+.hamburguer-menu::before {
+  transform: rotate(-45deg) translate(0, 0px);
+}
+
+/* ------HAMBURGUER INPUT----- */
+
+#hamburguer-menu {
+  height: 40px;
+  left: 44.5vw;
+  opacity: 0;
+  position: absolute;
+  top: 10.5vh;
+  width: 40px;
+  z-index: 2;
+}
+
+#hamburguer-menu:checked~.header-nav {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+/* ------NAV CONFIGURATION----- */
+
+.header-nav {
+  border-top: thin solid var(--blanco-meli);
+  display: none;
+  margin-top: 1vh;
+  padding-top: 1vh;
+  transition: display 2s linear;
+}
+
+.product-category,
+.count-category {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  width: 50vw;
+}
+
+.header-nav a {
+  color: var(--negro-meli);
+}
+
+.product-category li,
+.count-category li {
+  height: 18px;
+}
+
+/* ------------------BANNER------------------- */
+
+.banner-container {
+  width: 100vw;
+}
+
+/* ------------------MAIN------------------- */
+
+main h2 {
+  font-size: 24px;
+  font-weight: 200;
+  width: 100vw;
+  height: 50px;
+}
+
+.section-lastView,
+.section-ofertas {
+  width: 100vw;
+  justify-content: space-evenly;
+}
+
+
+/* ---------------------PRODUCT ITEM------------------------- */
+
+.product-item {
+  background-color: var(--blanco-meli);
+  margin-bottom: 10px;
+  width: 90vw;
+}
+
+.product-item img {
+  padding: 10px;
+  width: 80%;
+}
+
+.info-container {
+  align-items: flex-end;
+  border-top: 1px solid var(--gris-claro-meli);
+  position: relative;
+  padding-left: 5%;
+  width: inherit;
+}
+
+.price-item {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  justify-content: flex-start;
+  padding-top: 13.5px;
+  padding-bottom: 13.5px;
+  text-align: center;
+  width: 30%;
+}
+
+.price-item::before {
+  content: "$";
+}
+
+.discount-item {
+  color: var(--verde-descuento-meli);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 15px;
+  padding-bottom: 13.5px;
+  justify-content: flex-start;
+  width: 70%;
+}
+
+.discount-item::after {
+  content: "% off";
+}
+
+.description-item {
+  display: none;
+  font-size: 16px;
+  font-weight: bold;
+  height: 45px;
+  width: 100%;
+  justify-content: flex-start;
+  color: var(--gris-oscuro-meli);
+}
+
+.truck-icon {
+  background-color: var(--blanco-meli);
+  border-radius: 50%;
+  border: thin solid var(--verde-descuento-meli);
+  height: var(--truck-icon);
+  position: absolute;
+  right: var(--truck-icon);
+  top: calc(var(--truck-icon) * -0.5);
+  width: var(--truck-icon);
+}
+
+.truck-icon i {
+  color: var(--verde-descuento-meli);
+  font-size: calc(var(--truck-icon) * 0.45);
+}
+
+/* ------------------FOOTER------------------- */
+
+footer {
+  background-color: var(--blanco-meli);
+  padding-top: 30px;
+  width: 100vw;
+}
+
+footer section {
+  margin-bottom: 40px;
+  text-align: center;
+  width: 65%;
+}
+
+footer h3 {
+  font-size: 1.38rem;
+}
+
+footer i {
+  color: var(--celeste-meli);
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+footer span {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+/* -----MEDIAS QUERIES---- */
+
+@media (min-width: 361px) {
+  .product-item {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: 42.5vw;
+  }
+
+  .price-item {
+    padding-bottom: 0px;
+  }
+
+  .discount-item {
+    padding-bottom: 0px;
+  }
+
+  .description-item {
+    display: flex;
+  }
+
+  .hamburguer-menu {
+    display: none;
+  }
+
+  .header-nav {
+    border: none;
+    display: flex;
+  }
+
+  .logo-container {
+    height: 10vh;
+  }
+
+  .logo-img {
+    width: 30vw;
+  }
+
+  .search-box {
+    width: 30vw;
+  }
+
+  .txt-cuota {
+    width: 30vw;
+  }
+
+  .header-nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .product-category,
+  .count-category {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .count-category {
+    justify-content: flex-end;
+  }
+
+  .product-category li,
+  .count-category li {
+    margin: 0 10px;
+  }
+
+  .search-box input {
+    height: 45%;
+  }
+
+  .search-box label {
+    height: 45%;
+    width: 15%;
+  }
+
+
+  .search-box i {
+    top: 40%;
+  }
+
+  footer {
+    flex-flow: row wrap !important;
+  }
+
+  footer section {
+    padding: 0 15px;
+    width: 33%;
+  }
+
+
+}
+
+@media (min-width: 769px) {
+  .product-item {
+    width: 23vw;
+  }
+}
