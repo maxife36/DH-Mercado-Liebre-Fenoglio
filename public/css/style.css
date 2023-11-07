@@ -76,6 +76,10 @@ header {
   width: inherit;
 }
 
+.logo-container a {
+  height: inherit;
+}
+
 .logo-img {
   height: inherit;
   width: 50vw;
@@ -211,6 +215,7 @@ header {
   margin-top: 1vh;
   padding-top: 1vh;
   transition: display 2s linear;
+  overflow: hidden;
 }
 
 .product-category,

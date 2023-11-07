@@ -1,0 +1,268 @@
+:root {
+    --amarillo-meli: #EAC926;
+    --azul-meli: #03264C;
+    --blanco-meli: #fff;
+    --celeste-meli: #1259c3;
+    --gris-claro-meli: #ebebeb;
+    --gris-intermedio-meli: #c0c0c0;
+    --gris-oscuro-meli: #666;
+    --verde-descuento-meli: #00a650;
+    --negro-meli: #000;
+    --hamburguer-width: 28px;
+    --truck-icon: 30px;
+    --input-container-width:100vw;
+    --input-container-height:50px
+    
+  }
+
+.register-form{
+    width: var(--input-container-width);
+}
+
+.input-container{
+    position: relative;
+    height: var(--input-container-height);
+    margin: 15px 0 5px 0;
+}
+
+.input-config{
+    border: 1px solid var(--gris-intermedio-meli) ;
+    border-radius: calc(var(--input-container-height) * 0.8 * 0.5);
+    width: calc(var(--input-container-width) * 0.8);
+    height: calc(var(--input-container-height) * 0.8);
+    padding: 0 10px ;
+    color: var(--gris-intermedio-meli);
+    letter-spacing: 1px;
+    transform: scale(1);
+    transition: all 0.5s linear ;
+}
+
+.input-config:focus{
+    transform: scale(1.02);   
+    border: 1px solid var(--celeste-meli) ;
+    border-radius: calc(var(--input-container-height) * 0.7 * 0.33);
+    color: var(--gris-oscuro-meli);
+    outline:none;
+}
+
+.label-config{
+    position: absolute;
+    background: linear-gradient(var(--gris-claro-meli), 75% , var(--blanco-meli));
+    top: calc(var(--input-container-height) * -0.05);
+    left: calc(var(--input-container-width) * 0.05) ;
+    border-radius: 30% ;
+    padding: 0 5px;
+    letter-spacing: 2px;
+    color: var(--gris-oscuro-meli);
+    z-index: 2;
+    transition: all .5s linear;
+}
+
+.user-profile-img-label{
+    cursor: pointer;
+    width: calc(var(--input-container-width) * 0.8);
+    height: calc(var(--input-container-height) * 0.8);
+    padding: 0 10px ;
+    color: var(--gris-intermedio-meli);
+    letter-spacing: 1px;
+    background-color: var(--celeste-meli);
+    box-shadow: var(--azul-meli) 0px 5px 10px;
+    border-radius: calc(var(--input-container-height) * 0.8 *0.5);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#user-profile-img{
+    display: none;
+}
+
+.input-config:focus + .label-config{
+    color: var(--gris-intermedio-meli);
+    font-style: italic;
+}
+
+.input-config:focus + .full-name-label{
+    left: calc(var(--input-container-width) * 0.38) ;
+}
+
+.input-config:focus + .user-email-label{
+    left: calc(var(--input-container-width) * 0.64) ;
+}
+
+.input-config:focus + .user-birthday-label{
+    left: calc(var(--input-container-width) * 0.33) ;
+}
+
+.input-config:focus + .user-adress-label{
+    left: calc(var(--input-container-width) * 0.56) ;
+}
+
+.input-config:focus + .user-name-label{
+    left: calc(var(--input-container-width) * 0.36) ;
+}
+
+.input-config:focus + .user-password-label{
+    left: calc(var(--input-container-width) * 0.52) ;
+}
+.input-config:focus + .user-confirm-pass-label{
+    left: calc(var(--input-container-width) * 0.30) ;
+}
+
+
+
+/* -----------Reglas de boton Profile--------- */
+.personal-info-tittle,
+.profile-tittle,
+.interests-tittle{
+    width: calc(var(--input-container-width) * 0.8);
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 10px;
+    padding-bottom: 3px;
+    color: var(--gris-oscuro-meli);
+    border-bottom: 1px solid var(--gris-intermedio-meli);
+}
+
+label[for="user-profile-buyer"],
+label[for="user-profile-seller"]{
+    width: calc(var(--input-container-width) * 0.4);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--gris-oscuro-meli);
+    transition: all 0.3s ease-in-out;
+}
+
+#user-profile-buyer,
+#user-profile-seller{
+    cursor: pointer;
+    position: absolute;
+    width: calc(var(--input-container-width) * 0.4);
+    height: calc(var(--input-container-height) * 0.8);
+    z-index: 2;
+    opacity: 0;
+}
+
+#user-profile-buyer{
+    left: 0;
+}
+
+#user-profile-seller{
+    left:50%
+}
+
+.profile-selector{
+    position: absolute;
+    width: calc(var(--input-container-width) * 0.4);
+    height: calc(var(--input-container-height) * 0.8);
+    background-color: var(--celeste-meli);
+    z-index: -1;
+    box-shadow: var(--azul-meli) 0px 5px 10px;
+    border-radius: calc(var(--input-container-height) * 0.8 *0.5);
+    transition: all 0.5s ease-in-out;
+}
+
+#user-profile-buyer:checked ~ .profile-selector {
+    left: 0;
+}
+
+#user-profile-buyer:checked ~ label[for="user-profile-buyer"] {
+    color: var(--blanco-meli);
+}
+
+#user-profile-seller:checked ~ .profile-selector {
+    color: var(--blanco-meli);
+    left: 50%;
+}
+
+#user-profile-seller:checked ~ label[for="user-profile-seller"] {
+    color: var(--blanco-meli);
+}
+
+/* -------Reglas de interest--------- */
+
+.interests-container{
+    margin: 15px 0 5px 0;
+}
+
+.interest-container{
+    position: relative;
+    width: calc(var(--input-container-width) * 0.4);
+    height: calc(var(--input-container-height) * 0.4);
+    margin: 6px 0;
+}
+
+.interest-input{
+    width: calc(var(--input-container-width) * 0.4*0.25);
+    height: calc(var(--input-container-width) * 0.4*0.25*0.5);
+    z-index: 2;
+    opacity: 0;
+}
+
+.interest-label{
+    width: 70%;
+    height: inherit;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.iterests-button{
+    position: absolute;
+    width: 25%;
+    height: inherit;
+    left: 2%;
+    padding: 3px;
+    background-color: var(--azul-meli);
+    border-radius:calc(var(--input-container-height) * 0.4 * 0.5);
+    box-shadow: var(--gris-oscuro-meli) 0px 2px 10px inset;
+justify-content: flex-start;
+    transition: all 0.3s linear;
+
+}
+
+.iterests-button div{
+    width: 50%;
+    height: 100%;
+    background-color: var(--blanco-meli);
+    border-radius: 50%;
+    box-shadow: var(--gris-oscuro-meli) 0px 2px 10px ;
+}
+
+.interest-input:checked ~ .iterests-button{
+    justify-content: flex-end;
+    background-color: var(--celeste-meli);
+}
+
+/* -----Botones controladores del form----- */
+
+#forms-bts-container{
+    width: var(--input-container-width);
+    margin-bottom: 20px;
+}
+
+#submit-btn,
+#reset-btn{
+    all: unset;
+    cursor: pointer;
+    width: calc(var(--input-container-width) * 0.38);
+    height: calc(var(--input-container-height) * 0.8);;
+    color: var(--gris-intermedio-meli);
+    letter-spacing: 1px;
+    background-color: var(--celeste-meli);
+    box-shadow: var(--azul-meli) 0px 5px 10px;
+    border-radius: calc(var(--input-container-height) * 0.8 *0.5);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#submit-btn{
+    margin-left: calc(var(--input-container-width) * 0.1);
+    margin-right:calc(var(--input-container-width) * 0.05);
+}
+
+#reset-btn{
+    margin-right: calc(var(--input-container-width) * 0.1);
+    margin-left:calc(var(--input-container-width) * 0.02);
+}
+

@@ -19,6 +19,8 @@
     ></script>
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+
 
     <title>Mercado Liebre</title>
   </head>
@@ -26,11 +28,16 @@
     <header class="flx-col-nowrap">
       <section class="flx-row-wrap">
         <section class="logo-container flx-row-nowrap">
-          <a href="/">
-            <img class="logo-img" src="img/logo-mercado-liebre.svg" alt="Logo de Mercado Liebre"/>
-          </a>
+            <a href="/">
+                <img class="logo-img" src="img/logo-mercado-liebre.svg" alt="Logo de Mercado Liebre"/>
+            </a>
           <div class="search-box flx-row-nowrap">
-            <input type="text" name="" id="searcher" placeholder="Buscar productos, marca"/>
+            <input
+              type="text"
+              name=""
+              id="searcher"
+              placeholder="Buscar productos, marca"
+            />
             <label class="flx-row-nowrap" for="searcher">
               <i class="fa-solid fa-magnifying-glass"></i>
             </label>
@@ -68,12 +75,8 @@
         </ul>
       </nav>
     </header>
-    <img src="img/img-home-banner.jpg" alt="banner" class="banner-container" />
-    <main class="flx-row-wrap">
-      <h2 class="flx-row-wrap">Basado en tu última visita</h2>
-      <section class="section-lastView flx-row-wrap"></section>
-      <h2 class="flx-row-wrap">Ofertas</h2>
-      <section class="section-ofertas flx-row-wrap"></section>
+    <main class="flx-col-wrap">
+        <form action="/login-form" method="post"></form>
     </main>
     <footer class="flx-col-nowrap">
       <section class="flx-col-nowrap">

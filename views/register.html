@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONTAWESOME -->
+    <script
+      src="https://kit.fontawesome.com/d651fc4f2d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+
+    <title>Mercado Liebre</title>
+  </head>
+  <body class="flx-col-nowrap">
+    <header class="flx-col-nowrap">
+      <section class="flx-row-wrap">
+        <section class="logo-container flx-row-nowrap">
+            <a href="/">
+                <img class="logo-img" src="img/logo-mercado-liebre.svg" alt="Logo de Mercado Liebre"/>
+            </a>
+          <div class="search-box flx-row-nowrap">
+            <input
+              type="text"
+              name=""
+              id="searcher"
+              placeholder="Buscar productos, marca"
+            />
+            <label class="flx-row-nowrap" for="searcher">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+          </div>
+        </section>
+        <div class="txt-cuota flx-row-nowrap">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+          <h4>Comprá en cuotas y sin tarjeta de crédito</h4>
+        </div>
+      </section>
+      <input type="checkbox" name="hamburguer-menu" id="hamburguer-menu" />
+      <div class="hamburguer-menu flx-col-nowrap">
+        <div></div>
+      </div>
+      <nav class="header-nav">
+        <ul class="product-category">
+          <li><a href="#">Ofertas</a></li>
+          <li><a href="#">Tiendas Oficiales</a></li>
+          <li><a href="#">Vender</a></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+        <ul class="count-category">
+          <li>
+            <a href="/register">Creá tu cuenta</a>
+            <i class="fa-regular fa-address-card"></i>
+          </li>
+          <li>
+            <a href="/login">Ingresá</a>
+            <i class="fa-solid fa-right-to-bracket"></i>
+          </li>
+          <li>
+            <a href="#">Mis compras</a>
+            <i class="fa-solid fa-basket-shopping"></i>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="flx-col-wrap">
+        <form class="register-form flx-col-wrap" action="/register-form" method="post">
+            <h3 class="personal-info-tittle">Información Personal:</h3>
+            <div class="input-container flx-col-wrap" id="full-name-container">
+                <input class="input-config" type="text" name="fullName" id="full-Name">
+                <label class="label-config full-name-label" for="full-Name">Nombre y Apellido</label>
+            </div>
+            <div class="input-container flx-col-wrap" id="user-email-container">
+                <input class="input-config" type="email" name="userEmail" id="user-Email">
+                <label class="label-config user-email-label" for="user-Email">Email</label>
+            </div>
+            <div class="input-container flx-col-wrap" id="user-birthday-container">
+                <input class="input-config" type="date" name="userBirthday" id="user-Birthday">
+                <label class="label-config user-birthday-label" for="user-Birthday">Fecha de Nacimiento</label>
+            </div>
+            <div class="input-container flx-col-wrap" id="user-adress-container">
+                <input class="input-config" type="text" name="userAdress" id="user-Adress">
+                <label class="label-config user-adress-label" for="user-Adress">Domicilio</label>
+            </div>
+            <h3 class="profile-tittle">Perfil de Usuario:</h3>
+            <div class="input-container flx-row-nowrap" id="user-profile-container">
+              <input type="radio" name="userProfile" id="user-profile-buyer" value="buyer" checked>
+              <label for="user-profile-buyer">Comprador</label>
+              <input type="radio" name="userProfile" id="user-profile-seller" value="seller">
+              <label for="user-profile-seller">Vendedor</label>
+              <span class="profile-selector"></span>
+            </div>
+            <div class="input-container flx-col-wrap" id="user-name-conatiner">
+              <input class="input-config" type="text" name="userName" id="user-Name">
+              <label class="label-config user-name-label" for="user-Name">Nombre de Usuario</label>
+            </div>
+            <div class="input-container flx-col-wrap" id="user-password-conatiner">
+              <input class="input-config" type="password" name="password" id="user-password">
+              <label class="label-config user-password-label" for="user-password">Contraseña</label>
+            </div>
+            <div class="input-container flx-col-wrap" id="user-confirm-pass-conatiner">
+              <input class="input-config" type="password" name="confirmPassword" id="user-confirm-pass">
+              <label class="label-config user-confirm-pass-label" for="user-confirm-pass">Confirmar Contraseña</label>
+            </div>
+            <div class="input-container flx-col-wrap" id="user-profile-img-conatiner">
+              <input class="input-config" type="file" name="profileImg" id="user-profile-img" accept=".jpg, .jpeg, .png">
+              <label class="user-profile-img-label flx-col-wrap" for="user-profile-img">Imagen de Perfil</label>
+            </div>
+            <h3 class="interests-tittle">Categorías de interés:</h3>
+            <div class="interests-container flx-row-wrap" id="user-interests-container">
+              <div class="interest-container flx-row-nowrap">
+                <input type="checkbox" class="interest-input"name="userinterest" id="int-1" value="1">
+                <label class="interest-label" for="int-1">Electro</label>
+                <div class="iterests-button flx-row-nowrap">
+                  <div></div>
+                </div>
+              </div>
+              <div class="interest-container flx-row-nowrap">
+                <input type="checkbox" class="interest-input"name="userinterest" id="int-2" value="2">
+                <label class="interest-label" for="int-2">Moda</label>
+                <div class="iterests-button flx-row-nowrap">
+                  <div></div>
+                </div>
+              </div>
+              <div class="interest-container flx-row-nowrap">
+                <input type="checkbox" class="interest-input"name="userinterest" id="int-3" value="3">
+                <label class="interest-label" for="int-3">Hogar</label>
+                <div class="iterests-button flx-row-nowrap">
+                  <div></div>
+                </div>
+              </div>
+              <div class="interest-container flx-row-nowrap">
+                <input type="checkbox" class="interest-input"name="userinterest" id="int-4" value="4">
+                <label class="interest-label" for="int-4">Juguetería</label>
+                <div class="iterests-button flx-row-nowrap">
+                  <div></div>
+                </div>
+              </div>
+              <div class="interest-container flx-row-nowrap">
+                <input type="checkbox" class="interest-input"name="userinterest" id="int-5" value="5">
+                <label class="interest-label" for="int-5">Vida Sana</label>
+                <div class="iterests-button flx-row-nowrap">
+                  <div></div>
+                </div>
+              </div>
+              <div class="interest-container flx-row-nowrap">
+                <input type="checkbox" class="interest-input"name="userinterest" id="int-6" value="6">
+                <label class="interest-label" for="int-6">Música</label>
+                <div class="iterests-button flx-row-nowrap">
+                  <div></div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="input-container flx-row-nowrap" id="forms-bts-container">
+              <button  type="submit" id="submit-btn">Crear Usuario</button>
+              <button type="reset" id="reset-btn">Borrar</button>
+            </div>
+        </form>
+    </main>
+    <footer class="flx-col-nowrap">
+      <section class="flx-col-nowrap">
+        <i class="fa-solid fa-credit-card"></i>
+        <h3>Pagá con tarjeta en efectivo</h3>
+        <p>
+          Con MercadoLiebreCash tenés cuotas sin interés con tarjeta o efectivo
+          en puntos de pago. ¡Y siempre es seguro!
+        </p>
+      </section>
+      <section class="flx-col-nowrap">
+        <i class="fa-solid fa-gift"></i>
+        <h3>Envío gratis desde los $2.500</h3>
+        <p>
+          Solo por estar registrado en Mercado Liebre tenés envíos gratis en
+          miles de productos. Es un beneficio de Mercado Puntos.
+        </p>
+      </section>
+      <section class="flx-col-nowrap">
+        <i class="fa-solid fa-user-shield"></i>
+        <h3>Seguridad de principio a fin</h3>
+        <p>
+          ¿No te gusta? ¿Devolvelo! En MercadoLiebre no hay nada que no puedas
+          hacer porque estás siempre protegid@.
+        </p>
+      </section>
+      <span>Copyright &copy; 1999-2020 MercadoLiebre S.R.L.</span>
+    </footer>
+    <script type="module" src="/js/product-controller"></script>
+  </body>
+</html>
