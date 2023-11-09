@@ -26,8 +26,11 @@
 .beside{
     display: none;
     width: 65vw;
-    height: 100vh;
+    min-height: 95vh;
     background: linear-gradient(90deg, var(--azul-meli), 50%, var(--gris-claro-meli));
+}
+#logo-beside{
+    width: 80%;
 }
 
 /* -----Profile Img configuration----- */
@@ -354,6 +357,8 @@ label[for="user-profile-seller"] {
 @media (min-width:1080px) {
     :root {
         --input-container-width: 35vw;
+        --input-container-height: 60px;
+        --profile-img-size: 150px
     }
     .beside{
         display: flex;

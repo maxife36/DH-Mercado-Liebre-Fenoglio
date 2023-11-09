@@ -34,6 +34,8 @@ html {
 
 body {
   background-color: var(--gris-claro-meli);
+  align-items: stretch !important;
+
 }
 
 .flx-col-wrap {
