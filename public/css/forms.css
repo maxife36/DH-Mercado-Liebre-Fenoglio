@@ -305,6 +305,8 @@ label[for="user-profile-seller"] {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
+    transform: scaleX(1);
+    transition: all .15s linear;
 }
 
 #submit-btn {
@@ -338,6 +340,17 @@ label[for="user-profile-seller"] {
     text-align: right;
 }
 
+#submit-btn:hover,
+#reset-btn:hover,
+#login-btn:hover {
+    transform: scaleX(1.03);
+    background-color: var(--azul-meli);
+}
+
+
+
+/* ---------MEDIAS QUERIES--------- */
+
 @media (min-width: 440px) {
     :root {
         --input-container-width: 80vw;
@@ -363,7 +376,6 @@ label[for="user-profile-seller"] {
     .beside{
         display: flex;
         width: 65vw;
-
     }
     
   }
