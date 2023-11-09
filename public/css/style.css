@@ -71,6 +71,11 @@ header {
   width: 100vw;
 }
 
+main{
+  min-height: 95vh;
+  justify-content: flex-start !important;
+}
+
 .logo-container {
   height: 5vh;
   width: inherit;
@@ -99,6 +104,7 @@ header {
   border-radius: 5px;
   border: none;
   height: 60%;
+  padding-left: 5px;
   width: 85%;
 }
 
@@ -425,16 +431,24 @@ footer span {
     align-items: center;
   }
 
-  .product-category,
+/*   .product-category,
   .count-category {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-  }
+  } */
 
+  .product-category{
+    display: none;
+  }
+ 
   .count-category {
+    display: flex;
+    flex-flow: row nowrap;
     justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
   }
 
   .product-category li,
@@ -466,6 +480,15 @@ footer span {
   }
 
 
+}
+
+@media (min-width: 610px) {
+  .product-category{
+    display: flex;
+  }
+  .count-category {
+    width: 50vw;
+  }
 }
 
 @media (min-width: 769px) {

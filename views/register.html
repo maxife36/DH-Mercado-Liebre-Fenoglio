@@ -20,7 +20,7 @@
 
     <title>Mercado Liebre</title>
   </head>
-  <body class="flx-col-nowrap">
+  <body class="flx-row-wrap">
     <header class="flx-col-nowrap">
       <section class="flx-row-wrap">
         <section class="logo-container flx-row-nowrap">
@@ -71,8 +71,11 @@
         </ul>
       </nav>
     </header>
+    <article class="beside flx-col-nowrap">
+    </article>
     <main class="flx-col-wrap">
         <form class="register-form flx-col-wrap" action="/register-form" method="post">
+
             <div class="profile-img-section flx-col-wrap">
               <div class="profile-img-container">
                 <img src="/img/user-img.svg" alt="user-image" id="profile-img">
@@ -82,7 +85,9 @@
                 <i class="fa-solid fa-pencil"></i>
               </label>
             </div>
+
             <h3 class="personal-info-tittle">Información Personal:</h3>
+
             <div class="input-container flx-col-wrap" id="full-name-container">
                 <input class="input-config" type="text" name="fullName" id="full-Name" required>
                 <label class="label-config full-name-label" for="full-Name">Nombre y Apellido *</label>
@@ -99,7 +104,9 @@
                 <input class="input-config" type="text" name="userAdress" id="user-Adress">
                 <label class="label-config user-adress-label" for="user-Adress">Domicilio</label>
             </div>
+
             <h3 class="profile-tittle">Perfil de Usuario:</h3>
+            
             <div class="input-container flx-row-nowrap" id="user-profile-container">
               <input type="radio" name="userProfile" id="user-profile-buyer" value="buyer" checked>
               <label for="user-profile-buyer">Comprador</label>
@@ -119,7 +126,9 @@
               <input class="input-config" type="password" name="confirmPassword" id="user-confirm-pass" required>
               <label class="label-config user-confirm-pass-label" for="user-confirm-pass">Confirmar Contraseña *</label>
             </div>
+
             <h3 class="interests-tittle">Categorías de interés:</h3>
+
             <div class="interests-container flx-row-wrap" id="user-interests-container">
               <div class="interest-container flx-row-nowrap">
                 <input type="checkbox" class="interest-input"name="userinterest" id="int-1" value="1">

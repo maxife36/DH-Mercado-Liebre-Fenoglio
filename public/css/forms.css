@@ -23,6 +23,13 @@
     width: var(--input-container-width);
 }
 
+.beside{
+    display: none;
+    width: 65vw;
+    height: 100vh;
+    background: linear-gradient(90deg, var(--azul-meli), 50%, var(--gris-claro-meli));
+}
+
 /* -----Profile Img configuration----- */
 
 .profile-img-section {
@@ -281,12 +288,12 @@ label[for="user-profile-seller"] {
 }
 
 #submit-btn,
-#reset-btn {
+#reset-btn,
+#login-btn{
     all: unset;
     cursor: pointer;
     width: var(--input-config-half-width);
     height: var(--input-config-height);
-    ;
     color: var(--gris-intermedio-meli);
     letter-spacing: 1px;
     background-color: var(--celeste-meli);
@@ -306,3 +313,52 @@ label[for="user-profile-seller"] {
     margin-right: 10%;
     margin-left: 3.5%;
 }
+
+#login-btn{
+    width: 60%;
+}
+
+.option-container{
+    width: var(--input-config-width);
+    margin: 15px 0;
+}
+
+.rememberme-container,
+.forgot-container{
+    width:50%;
+    font-style: italic;
+}
+
+.forgot-container{
+    cursor: pointer;
+    font-size: 14px;
+    text-align: right;
+}
+
+@media (min-width: 440px) {
+    :root {
+        --input-container-width: 80vw;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1080px) {
+    :root {
+        --input-container-width: 50vw;
+    }
+    .beside{
+        display: flex;
+        width: 50vw;
+    }
+  }
+  
+@media (min-width:1080px) {
+    :root {
+        --input-container-width: 35vw;
+    }
+    .beside{
+        display: flex;
+        width: 65vw;
+
+    }
+    
+  }
