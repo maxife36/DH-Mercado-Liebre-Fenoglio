@@ -16,6 +16,7 @@ const PORT = 3000
 
 const pathIndex = path.resolve("views", "home.html") 
 const pathProductController = path.resolve("js", "product-controller.js") 
+const pathRegisterFormController = path.resolve("js", "register-form-controller.js") 
 const pathProductInfo = path.resolve("Info-Productos", "productos-Prueba.js") 
 const pathRegister = path.resolve("views", "register.html")
 const pathLogin = path.resolve("views", "login.html")
@@ -29,6 +30,7 @@ app.get("/register", (req,res) => res.sendFile(pathRegister))
 app.get("/login", (req,res) => res.sendFile(pathLogin))
 app.get("/js/product-controller", (req,res) => res.sendFile(pathProductController))
 app.get("/js/product-info", (req,res) => res.sendFile(pathProductInfo))
+app.get("/js/register-form-controller", (req,res) => res.sendFile(pathRegisterFormController))
 
 app.post("/register-form", (req,res) => {
     try {

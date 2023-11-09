@@ -10,47 +10,102 @@
     --negro-meli: #000;
     --hamburguer-width: 28px;
     --truck-icon: 30px;
-    --input-container-width:100vw;
-    --input-container-height:50px
-    
-  }
+    --input-container-width: 100vw;
+    --input-container-height: 50px;
+    --input-config-width: calc(var(--input-container-width) * 0.8);
+    --input-config-height: calc(var(--input-container-height) * 0.8);;
+    --input-config-half-width: calc(var(--input-config-width) * 0.5);
+    --input-config-half-height: calc(var(--input-config-height) * 0.5);;
+    --profile-img-size: 100px
+}
 
-.register-form{
+.register-form {
     width: var(--input-container-width);
 }
 
-.input-container{
+/* -----Profile Img configuration----- */
+
+.profile-img-section {
     position: relative;
+    width: var(--profile-img-size);
+    margin: 15px 0 3px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gris-intermedio-meli);
+}
+
+.profile-img-container {
+    width: var(--profile-img-size);
+    height: var(--profile-img-size);
+    background-color: #c0c0c070;
+    border-radius: 50%;
+    border: 1px solid var(--gris-oscuro-meli);
+    overflow: hidden;
+
+}
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#add-img {
+    display: none;
+}
+
+label[for="add-img"] {
+    position: absolute;
+    right: -10%;
+    bottom: 15%;
+    width: 30px;
+    height: 30px;
+    background-color: var(--blanco-meli);
+    border-radius: 50%;
+    border: 1px solid var(--verde-descuento-meli);
+    color: var(--verde-descuento-meli);
+    box-shadow: var(--azul-meli) 1px 3px 3px;
+
+}
+
+label[for="add-img"] i {
+    font-size: 15px;
+}
+
+/* -----Profile Inofrmation configuration----- */
+
+.input-container {
+    position: relative;
+    width: var(--input-config-width);
     height: var(--input-container-height);
     margin: 15px 0 5px 0;
 }
 
-.input-config{
-    border: 1px solid var(--gris-intermedio-meli) ;
-    border-radius: calc(var(--input-container-height) * 0.8 * 0.5);
-    width: calc(var(--input-container-width) * 0.8);
-    height: calc(var(--input-container-height) * 0.8);
-    padding: 0 10px ;
+.input-config {
+    border: 1px solid var(--gris-intermedio-meli);
+    border-radius: var(--input-config-half-height);
+    width: inherit;
+    height: var(--input-config-height);
+    padding: 0 10px;
     color: var(--gris-intermedio-meli);
     letter-spacing: 1px;
     transform: scale(1);
-    transition: all 0.5s linear ;
+    transition: all 0.5s linear;
 }
 
-.input-config:focus{
-    transform: scale(1.02);   
-    border: 1px solid var(--celeste-meli) ;
-    border-radius: calc(var(--input-container-height) * 0.7 * 0.33);
+.input-config:focus {
+    transform: scale(1.02);
+    border: 1px solid var(--celeste-meli);
+    border-radius: calc(var(--input-config-height) * 0.29);
     color: var(--gris-oscuro-meli);
-    outline:none;
+    outline: none;
 }
 
-.label-config{
+.label-config {
     position: absolute;
-    background: linear-gradient(var(--gris-claro-meli), 75% , var(--blanco-meli));
-    top: calc(var(--input-container-height) * -0.05);
-    left: calc(var(--input-container-width) * 0.05) ;
-    border-radius: 30% ;
+    background: linear-gradient(var(--gris-claro-meli), 60%, var(--blanco-meli));
+    top: -3px;
+    left: 25px;
+    border-radius: 8px;
     padding: 0 5px;
     letter-spacing: 2px;
     color: var(--gris-oscuro-meli);
@@ -58,54 +113,37 @@
     transition: all .5s linear;
 }
 
-.user-profile-img-label{
-    cursor: pointer;
-    width: calc(var(--input-container-width) * 0.8);
-    height: calc(var(--input-container-height) * 0.8);
-    padding: 0 10px ;
-    color: var(--gris-intermedio-meli);
-    letter-spacing: 1px;
-    background-color: var(--celeste-meli);
-    box-shadow: var(--azul-meli) 0px 5px 10px;
-    border-radius: calc(var(--input-container-height) * 0.8 *0.5);
-    font-size: 14px;
-    font-weight: bold;
-}
-
-#user-profile-img{
-    display: none;
-}
-
-.input-config:focus + .label-config{
+.input-config:focus+.label-config {
     color: var(--gris-intermedio-meli);
     font-style: italic;
 }
 
-.input-config:focus + .full-name-label{
-    left: calc(var(--input-container-width) * 0.38) ;
+.input-config:focus+.full-name-label {
+    left: calc(var(--input-config-width) - 164px);
 }
 
-.input-config:focus + .user-email-label{
-    left: calc(var(--input-container-width) * 0.64) ;
+.input-config:focus+.user-email-label {    
+    left: calc(var(--input-config-width) - 72px);
 }
 
-.input-config:focus + .user-birthday-label{
-    left: calc(var(--input-container-width) * 0.33) ;
+.input-config:focus+.user-birthday-label {
+    left: calc(var(--input-config-width) - 183px);
 }
 
-.input-config:focus + .user-adress-label{
-    left: calc(var(--input-container-width) * 0.56) ;
+.input-config:focus+.user-adress-label {
+    left: calc(var(--input-config-width) - 88px);
 }
 
-.input-config:focus + .user-name-label{
-    left: calc(var(--input-container-width) * 0.36) ;
+.input-config:focus+.user-name-label {
+    left: calc(var(--input-config-width) - 169px);
 }
 
-.input-config:focus + .user-password-label{
-    left: calc(var(--input-container-width) * 0.52) ;
+.input-config:focus+.user-password-label {
+    left: calc(var(--input-config-width) - 114px);
 }
-.input-config:focus + .user-confirm-pass-label{
-    left: calc(var(--input-container-width) * 0.30) ;
+
+.input-config:focus+.user-confirm-pass-label {
+    left: calc(var(--input-config-width) - 190px);
 }
 
 
@@ -113,8 +151,8 @@
 /* -----------Reglas de boton Profile--------- */
 .personal-info-tittle,
 .profile-tittle,
-.interests-tittle{
-    width: calc(var(--input-container-width) * 0.8);
+.interests-tittle {
+    width: var(--input-config-width);
     font-size: 16px;
     font-weight: normal;
     margin-top: 10px;
@@ -124,8 +162,8 @@
 }
 
 label[for="user-profile-buyer"],
-label[for="user-profile-seller"]{
-    width: calc(var(--input-container-width) * 0.4);
+label[for="user-profile-seller"] {
+    width: var(--input-config-half-width);
     text-align: center;
     font-size: 14px;
     font-weight: bold;
@@ -134,135 +172,137 @@ label[for="user-profile-seller"]{
 }
 
 #user-profile-buyer,
-#user-profile-seller{
+#user-profile-seller {
     cursor: pointer;
     position: absolute;
-    width: calc(var(--input-container-width) * 0.4);
-    height: calc(var(--input-container-height) * 0.8);
+    width: var(--input-config-half-width);
+    height: var(--input-config-height);
     z-index: 2;
     opacity: 0;
 }
 
-#user-profile-buyer{
+#user-profile-buyer {
     left: 0;
 }
 
-#user-profile-seller{
-    left:50%
+#user-profile-seller {
+    left: 50%
 }
 
-.profile-selector{
+.profile-selector {
     position: absolute;
-    width: calc(var(--input-container-width) * 0.4);
-    height: calc(var(--input-container-height) * 0.8);
+    width: var(--input-config-half-width);
+    height: var(--input-config-height);
     background-color: var(--celeste-meli);
     z-index: -1;
     box-shadow: var(--azul-meli) 0px 5px 10px;
-    border-radius: calc(var(--input-container-height) * 0.8 *0.5);
+    border-radius: var(--input-config-half-height);
     transition: all 0.5s ease-in-out;
 }
 
-#user-profile-buyer:checked ~ .profile-selector {
+#user-profile-buyer:checked~.profile-selector {
     left: 0;
 }
 
-#user-profile-buyer:checked ~ label[for="user-profile-buyer"] {
+#user-profile-buyer:checked~label[for="user-profile-buyer"] {
     color: var(--blanco-meli);
 }
 
-#user-profile-seller:checked ~ .profile-selector {
+#user-profile-seller:checked~.profile-selector {
     color: var(--blanco-meli);
     left: 50%;
 }
 
-#user-profile-seller:checked ~ label[for="user-profile-seller"] {
+#user-profile-seller:checked~label[for="user-profile-seller"] {
     color: var(--blanco-meli);
 }
 
 /* -------Reglas de interest--------- */
 
-.interests-container{
+.interests-container {
     margin: 15px 0 5px 0;
 }
 
-.interest-container{
+.interest-container {
     position: relative;
-    width: calc(var(--input-container-width) * 0.4);
-    height: calc(var(--input-container-height) * 0.4);
+    width: var(--input-config-half-width);
+    height: var(--input-config-half-height);
     margin: 6px 0;
 }
 
-.interest-input{
-    width: calc(var(--input-container-width) * 0.4*0.25);
-    height: calc(var(--input-container-width) * 0.4*0.25*0.5);
+.interest-input {
+    width: 25%;
+    height: calc(var(--input-config-half-width) * 0.125) ; /* 0.125 corresponde a la mitad del width de esta regla. Mantiene proporcion del switch 1:2*/
     z-index: 2;
     opacity: 0;
 }
 
-.interest-label{
-    width: 70%;
+.interest-label {
+    width: 75%;
     height: inherit;
     font-size: 14px;
     padding-left: 10px;
 }
 
-.iterests-button{
+.iterests-button {
     position: absolute;
     width: 25%;
     height: inherit;
+    max-width: 40px;
+    min-width: 30px;
     left: 2%;
     padding: 3px;
     background-color: var(--azul-meli);
-    border-radius:calc(var(--input-container-height) * 0.4 * 0.5);
+    border-radius: calc(var(--input-config-half-height)* 0.5);
     box-shadow: var(--gris-oscuro-meli) 0px 2px 10px inset;
-justify-content: flex-start;
+    justify-content: flex-start;
     transition: all 0.3s linear;
 
 }
 
-.iterests-button div{
+.iterests-button div {
     width: 50%;
     height: 100%;
     background-color: var(--blanco-meli);
     border-radius: 50%;
-    box-shadow: var(--gris-oscuro-meli) 0px 2px 10px ;
+    box-shadow: var(--gris-oscuro-meli) 0px 2px 10px;
 }
 
-.interest-input:checked ~ .iterests-button{
+.interest-input:checked~.iterests-button {
     justify-content: flex-end;
     background-color: var(--celeste-meli);
 }
 
 /* -----Botones controladores del form----- */
 
-#forms-bts-container{
+#forms-bts-container {
     width: var(--input-container-width);
     margin-bottom: 20px;
 }
 
 #submit-btn,
-#reset-btn{
+#reset-btn {
     all: unset;
     cursor: pointer;
-    width: calc(var(--input-container-width) * 0.38);
-    height: calc(var(--input-container-height) * 0.8);;
+    width: var(--input-config-half-width);
+    height: var(--input-config-height);
+    ;
     color: var(--gris-intermedio-meli);
     letter-spacing: 1px;
     background-color: var(--celeste-meli);
     box-shadow: var(--azul-meli) 0px 5px 10px;
-    border-radius: calc(var(--input-container-height) * 0.8 *0.5);
+    border-radius: var(--input-config-half-height);
     text-align: center;
     font-size: 14px;
     font-weight: bold;
 }
 
-#submit-btn{
-    margin-left: calc(var(--input-container-width) * 0.1);
-    margin-right:calc(var(--input-container-width) * 0.05);
+#submit-btn {
+    margin-left: 10%;
+    margin-right: 3.5%;
 }
 
-#reset-btn{
-    margin-right: calc(var(--input-container-width) * 0.1);
-    margin-left:calc(var(--input-container-width) * 0.02);
+#reset-btn {
+    margin-right: 10%;
+    margin-left: 3.5%;
 }
-
