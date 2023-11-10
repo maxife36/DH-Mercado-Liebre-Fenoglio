@@ -391,10 +391,12 @@ footer span {
 
   .price-item {
     padding-bottom: 0px;
+    width: 45%;
   }
 
   .discount-item {
     padding-bottom: 0px;
+    width: 55%;
   }
 
   .description-item {
@@ -432,14 +434,6 @@ footer span {
     justify-content: space-between;
     align-items: center;
   }
-
-/*   .product-category,
-  .count-category {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-  } */
 
   .product-category{
     display: none;
@@ -496,5 +490,14 @@ footer span {
 @media (min-width: 769px) {
   .product-item {
     width: 23vw;
+  }
+  
+  .price-item {
+    width: 40%;
+  }
+
+  .discount-item {    
+    width: 60%;
+
   }
 }

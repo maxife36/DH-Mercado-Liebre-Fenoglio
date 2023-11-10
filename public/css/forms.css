@@ -111,6 +111,7 @@ label[for="add-img"] i {
 }
 
 .label-config {
+    cursor: pointer;
     position: absolute;
     background: linear-gradient(var(--gris-claro-meli), 60%, var(--blanco-meli));
     top: -3px;
@@ -376,6 +377,10 @@ label[for="user-profile-seller"] {
     .beside{
         display: flex;
         width: 65vw;
+    }
+    
+    label[for="add-img"] {
+    right: -3%;
     }
     
   }
