@@ -287,13 +287,26 @@ main h2 {
   width: 80%;
 }
 
+.product-item:hover{
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.product-item:hover .description-item {
+  display: flex;
+}
+
 .info-container {
   align-items: flex-end;
   border-top: 1px solid var(--gris-claro-meli);
   position: relative;
   padding-left: 5%;
   width: inherit;
+
 }
+.product-item:hover .info-container{
+  margin-bottom: 0px;
+}
+
 
 .price-item {
   font-size: 18px;
@@ -344,11 +357,17 @@ main h2 {
   right: var(--truck-icon);
   top: calc(var(--truck-icon) * -0.5);
   width: var(--truck-icon);
+  transform: rotate(0);
+  transition: transform 0.5s linear;
 }
 
 .truck-icon i {
   color: var(--verde-descuento-meli);
   font-size: calc(var(--truck-icon) * 0.45);
+}
+
+.product-item:hover .truck-icon {
+  transform: rotate(-90deg);
 }
 
 /* ------------------FOOTER------------------- */
@@ -385,7 +404,6 @@ footer span {
 
 @media (min-width: 361px) {
   .product-item {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
     width: 42.5vw;
   }
 
@@ -399,8 +417,8 @@ footer span {
     width: 55%;
   }
 
-  .description-item {
-    display: flex;
+  .info-container {
+    margin-bottom: 10px; 
   }
 
   .hamburguer-menu {

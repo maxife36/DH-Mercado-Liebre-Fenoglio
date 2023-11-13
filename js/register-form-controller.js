@@ -161,12 +161,6 @@ inputConfirmPass.addEventListener("change", () =>{
 
 //------------------Rules Information Event Listeners---------------------- 
 
-/* const fullNameRegex = /^[a-zA-Z0-9\s]+$/
-const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
-const userNameRegex = /^[a-zA-Z0-9._-]{6,16}$/
-const passwordRegex = /^(?=.+[a-z])(?=.+[A-Z])(?=.+\d)(?=.+[\.@$!%*?&])[A-Za-z\d\.@$!%*?&]{8,}$/ */
-
-
 labelFullName.addEventListener("click", ()=>{
   window.alert(
   `Caracteres Permitidos:
