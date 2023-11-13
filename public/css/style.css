@@ -402,7 +402,7 @@ footer span {
 
 /* -----MEDIAS QUERIES---- */
 
-@media (min-width: 400px) {
+@media (min-width: 440px) {
   .product-item {
     width: 42.5vw;
   }
