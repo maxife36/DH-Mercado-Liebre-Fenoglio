@@ -1,6 +1,5 @@
 const express = require("express")
 const path = require("path")
-const { log } = require("util")
 
 const app = express()
 
@@ -10,7 +9,7 @@ console.log(pathPublic);
 
 app.use(express.static(pathPublic))
 
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 //---Paths---
 
