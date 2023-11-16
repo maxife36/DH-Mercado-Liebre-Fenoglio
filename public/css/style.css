@@ -94,15 +94,12 @@ main{
 
 .search-box {
   height: inherit;
-  position: relative;
   width: 50vw;
 }
 
-.search-box input::placeholder {
-  font-size: 11px;
-}
 
-.search-box input {
+#searcher {
+  outline: unset;
   border-radius: 5px;
   border: none;
   height: 60%;
@@ -110,27 +107,38 @@ main{
   width: 85%;
 }
 
-.search-box label {
-  height: 60%;
-  right: 7.5%;
-  width: 14%;
-  background-color: var(--blanco-meli);
-  border-radius: 5px;
-  position: absolute;
-  justify-content: space-around;
+#searcher::placeholder {
+  font-size: 11px;
 }
 
-.search-box label::before {
-  content: "";
+label[for="searcher"]{
+  position: relative;
+  width: 80%;
   height: 80%;
-  width: 1.5px;
-  background-color: var(--gris-claro-meli);
 }
 
-.search-box i {
-  background-color: var(--blanco-meli);
-  font-size: 2vh;
+label[for="searcher"] button{
+all: unset;
+position: absolute;
+right: 9.5%;
+color: var(--negro-meli);
+background-color: var(--blanco-meli);
+padding-left: 4px;
+border-left: 1px solid var(--gris-claro-meli);
+font-size: 16px;
+z-index: 2;
 }
+
+/* label[for="searcher"] i {
+  position: absolute;
+  right: 10%;
+  color: var(--negro-meli);
+  background-color: var(--blanco-meli);
+  padding-left: 4px;
+  border-left: 1px solid var(--gris-claro-meli);
+  font-size: 16px;
+  z-index: 2;
+} */
 
 .txt-cuota {
   width: 100vw;
@@ -292,7 +300,9 @@ main h2 {
 }
 
 .product-item:hover .description-item {
-  display: flex;
+ height: 45px;
+ color: var(--gris-oscuro-meli);
+
 }
 
 .info-container {
@@ -339,13 +349,14 @@ main h2 {
 }
 
 .description-item {
-  display: none;
   font-size: 16px;
   font-weight: bold;
   height: 45px;
+  height: 0px;
   width: 100%;
   justify-content: flex-start;
-  color: var(--gris-oscuro-meli);
+  color: transparent;
+  transition: all 0.3s linear;
 }
 
 .truck-icon {
@@ -378,17 +389,21 @@ footer {
   width: 100vw;
 }
 
-footer section {
+.foot-section {
   margin-bottom: 40px;
   text-align: center;
   width: 65%;
 }
 
-footer h3 {
+.foot-section:hover i {
+  color: var(--verde-descuento-meli);
+}
+
+.foot-section h3 {
   font-size: 1.38rem;
 }
 
-footer i {
+.foot-section i {
   color: var(--celeste-meli);
   font-size: 2em;
   margin-bottom: 10px;
@@ -429,17 +444,21 @@ footer span {
     border: none;
     display: flex;
   }
-
+  
   .logo-container {
     height: 10vh;
   }
-
+  
   .logo-img {
     width: 30vw;
   }
 
   .search-box {
     width: 30vw;
+  }
+
+  #searcher {
+    height: 45%;
   }
 
   .txt-cuota {
@@ -470,25 +489,12 @@ footer span {
     margin: 0 10px;
   }
 
-  .search-box input {
-    height: 45%;
-  }
-
-  .search-box label {
-    height: 45%;
-    width: 15%;
-  }
-
-
-  .search-box i {
-    top: 40%;
-  }
 
   footer {
     flex-flow: row wrap !important;
   }
 
-  footer section {
+  .foot-section {
     padding: 0 15px;
     width: 33%;
   }

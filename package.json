@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --env-file .env app.js",
-    "dev": "nodemon --env-file .env -q app.js"
+    "dev": "nodemon -q app.js"
   },
   "author": "",
   "license": "ISC",
