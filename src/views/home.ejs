@@ -15,17 +15,17 @@
       <h2 class="flx-row-wrap">Basado en tu última visita</h2>
       <section class="section-lastView flx-row-wrap">
 
-        <% productsData.forEach(el => { %>
+        <% productsData.forEach(product => { %>
 
           <article class="product-item flx-col-nowrap">
-            <img src="img/<%= el.img  %>" alt= <%= el.alt  %> />
+            <img src="img/<%= product.img  %>" alt= <%= product.alt  %> />
             <div class="info-container flx-row-wrap">
               <div class="truck-icon flx-col-nowrap">
                 <i class="fa-solid fa-truck" aria-hidden="true"></i>
               </div>
-              <h4 class="price-item flx-row-nowrap"><%= el.price  %></h4>
-              <h4 class="discount-item flx-row-nowrap"><%= el.discount  %></h4>
-              <h4 class="description-item flx-row-nowrap"><%= el.product  %></h4>
+              <h4 class="price-item flx-row-nowrap"><%= product.price  %></h4>
+              <h4 class="discount-item flx-row-nowrap"><%= product.discount  %></h4>
+              <h4 class="description-item flx-row-nowrap"><%= product.title  %></h4>
             </div>
           </article>
          

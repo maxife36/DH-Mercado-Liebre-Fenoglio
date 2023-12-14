@@ -1,7 +1,9 @@
-/* ---Modulos Nativos--- */
+/* ---Modulos Nativos y de Terceros--- */
 require('dotenv').config(); //Configura las variables establecidas en .env (no olvidar el script "start" del package.json)
 const express = require("express")
 const path = require("path")
+const methodOverride = require("method-override")
+
 
 /* ---Modulos Internos--- */
 
@@ -23,6 +25,9 @@ app.set("view engine", "ejs")
 app.set("views", pathViews)
 
 app.use(express.static(pathPublic))
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+app.use(methodOverride("_method"))
 
 /* ---Rutas Principales de Express--- */
 
