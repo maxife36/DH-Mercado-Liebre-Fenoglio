@@ -4,19 +4,59 @@
     <%- include("./partials/head.ejs")  %>
   </head>
   <body class="flx-col-nowrap">
-    
-    <%- include("./partials/header.ejs")  %>
 
+    <!-- header -->
+    <%- include("./partials/header.ejs")  %>
+    
+    <!-- main -->
     <img src="/img/img-home-banner.jpg" alt="banner" class="banner-container" />
     <main class="flx-row-wrap">
+
       <h2 class="flx-row-wrap">Basado en tu última visita</h2>
-      <section class="section-lastView flx-row-wrap"></section>
+      <section class="section-lastView flx-row-wrap">
+
+        <% productsData.forEach(el => { %>
+
+          <article class="product-item flx-col-nowrap">
+            <img src="img/<%= el.img  %>" alt= <%= el.alt  %> />
+            <div class="info-container flx-row-wrap">
+              <div class="truck-icon flx-col-nowrap">
+                <i class="fa-solid fa-truck" aria-hidden="true"></i>
+              </div>
+              <h4 class="price-item flx-row-nowrap"><%= el.price  %></h4>
+              <h4 class="discount-item flx-row-nowrap"><%= el.discount  %></h4>
+              <h4 class="description-item flx-row-nowrap"><%= el.product  %></h4>
+            </div>
+          </article>
+         
+        <% }) %>
+
+      </section>
+
       <h2 class="flx-row-wrap">Ofertas</h2>
-      <section class="section-ofertas flx-row-wrap"></section>
+      <section class="section-ofertas flx-row-wrap">
+
+        <% productsData.forEach(el => { %>
+
+          <article class="product-item flx-col-nowrap">
+            <img src="img/<%= el.img  %>" alt= <%= el.alt  %> />
+            <div class="info-container flx-row-wrap">
+              <div class="truck-icon flx-col-nowrap">
+                <i class="fa-solid fa-truck" aria-hidden="true"></i>
+              </div>
+              <h4 class="price-item flx-row-nowrap"><%= el.price  %></h4>
+              <h4 class="discount-item flx-row-nowrap"><%= el.discount  %></h4>
+              <h4 class="description-item flx-row-nowrap"><%= el.product  %></h4>
+            </div>
+          </article>
+         
+        <% }) %>
+
+      </section>
     </main>
 
+    <!-- footer -->
     <%- include("./partials/footer.ejs") %>
 
-    <script type="module" src="/js/product-controller"></script>
   </body>
 </html>

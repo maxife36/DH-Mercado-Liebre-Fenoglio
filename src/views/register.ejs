@@ -6,12 +6,14 @@
   </head>
   <body class="flx-row-wrap">
 
+    <!-- header -->
     <%- include("./partials/header.ejs")  %>
 
+    <!-- main -->
     <article class="beside flx-row-wrap">
       <img src="/img/logo-mercado-liebre.svg" alt="logo image" id="logo-beside">
     </article>
-    
+  
     <main class="flx-col-wrap">
         <form class="register-form flx-col-wrap" action="/register-form" method="post">
 
@@ -118,7 +120,8 @@
             </div>
         </form>
     </main>
-
+    
+    <!-- footer -->
     <%- include("./partials/footer.ejs") %>
 
     <script type="module" src="/js/register-form-controller"></script>
