@@ -1,15 +1,12 @@
 const express = require("express")
 const router = express.Router()
-const path = require("path")
+const controllers = require("../API-controllers/internalControllers")
 
 //---Paths---
 
-const pathProductController = path.resolve("src", "DOM-controllers", "product-controller.js") 
-const pathRegisterFormController = path.resolve("src", "DOM-controllers", "register-form-controller.js")
-const pathProductInfo = path.resolve("src", "Temporary-DB", "productos-Prueba.js") 
 
-router.get("/product-controller", (req,res) => res.sendFile(pathProductController))
-router.get("/product-info", (req,res) => res.sendFile(pathProductInfo))
-router.get("/register-form-controller", (req,res) => res.sendFile(pathRegisterFormController))
+router.get("/product-controller", controllers.get.DOMProductController)
+router.get("/product-info", controllers.get.DOMProductInfo)
+router.get("/register-form-controller", controllers.get.DOMFormController)
 
 module.exports = router

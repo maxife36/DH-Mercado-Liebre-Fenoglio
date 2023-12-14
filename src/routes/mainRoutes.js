@@ -1,31 +1,18 @@
 const express = require("express")
 const router = express.Router()
 const path = require("path")
+const controllers = require("../API-controllers/mainControllers")
 
 /* ------GET----- */
 
-router.get("/", (req,res) => res.render("home.ejs"))
-router.get("/register", (req,res) => res.render("register.ejs"))
-router.get("/login", (req,res) => res.render("login.ejs"))
+router.get("/", controllers.get.home)
+router.get("/register", controllers.get.register)
+router.get("/login", controllers.get.login)
 
 /* ------POST----- */
 
-/* router.post("/register-form", (req,res) => {
-    try {
-        const data = req.body
-        
-    } catch (error) {
-        
-    }
-})
-router.post("/login-form", (req,res) => {
-    try {
-        const data = req.body
-        
-    } catch (error) {
-        
-    }
-}) */
+router.post("/register-form",controllers.post.registerForm )
+router.post("/login-form",controllers.post.loginForm ) 
 
 
 module.exports = router

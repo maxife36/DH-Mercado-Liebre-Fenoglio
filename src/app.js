@@ -1,33 +1,33 @@
-const { render } = require("ejs")
+/* ---Modulos Nativos--- */
+require('dotenv').config(); //Configura las variables establecidas en .env (no olvidar el script "start" del package.json)
 const express = require("express")
 const path = require("path")
+
+/* ---Modulos Internos--- */
+
 const mainRoutes = require("./routes/mainRoutes")
 const internalRoutes = require("./routes/internalRoutes")
+
+/* ---Variables de Configuracion--- */
+
+const PORT = parseInt(process.env.PORT) || 3000
 
 const app = express()
 
 const pathPublic = path.resolve("public")
 const pathViews = path.resolve("src", "views")
 
+/* ---Pre Configuraciones de Express--- */
+
 app.set("view engine", "ejs")
 app.set("views", pathViews)
 
 app.use(express.static(pathPublic))
 
-const PORT = process.env.PORT || 3000
+/* ---Rutas Principales de Express--- */
 
 app.use("/", mainRoutes)
 app.use("/js", internalRoutes)
-
-
-//----Peticiones CRUD----
-
-/* app.get("/", (req,res) => res.render("home.ejs"))
-app.get("/register", (req,res) => res.render("register.ejs"))
-app.get("/login", (req,res) => res.render("login.ejs")) */
-
-
-
 
 
 
