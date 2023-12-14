@@ -1,4 +1,5 @@
 import {informacionProvisoria} from "/js/product-info"
+/* import {informacionProvisoria} from "../Temporary-DB/productos-Prueba.js" */
 
 const productConstructor = (obj) => {
     /* ----Creacion de Elementos---- */

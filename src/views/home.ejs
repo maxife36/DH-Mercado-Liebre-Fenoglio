@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./partials/head.ejs")  %>
+  </head>
+  <body class="flx-col-nowrap">
+    
+    <%- include("./partials/header.ejs")  %>
+
+    <img src="/img/img-home-banner.jpg" alt="banner" class="banner-container" />
+    <main class="flx-row-wrap">
+      <h2 class="flx-row-wrap">Basado en tu última visita</h2>
+      <section class="section-lastView flx-row-wrap"></section>
+      <h2 class="flx-row-wrap">Ofertas</h2>
+      <section class="section-ofertas flx-row-wrap"></section>
+    </main>
+
+    <%- include("./partials/footer.ejs") %>
+
+    <script type="module" src="/js/product-controller"></script>
+  </body>
+</html>
